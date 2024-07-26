@@ -12,9 +12,6 @@ let snakeArr = [
 ]
 food = {x: 6, y: 7};
 
-
-
-
 // Game Functions
 function main(curtime){
     window.requestAnimationFrame(main);
@@ -25,7 +22,6 @@ function main(curtime){
     lastPaintTime = curtime;
     gameEngine();
 }
-
 
 function isCollide(snakeArr) {
     // If you bump into yourself
@@ -51,7 +47,6 @@ function gameEngine() {
         musicSound.play();
         score = 0;
     }
-
 
     // If you have eaten the food, increment the score and regenerate the food
     if(snakeArr[0].y === food.y && snakeArr[0].x === food.x){
@@ -102,9 +97,6 @@ function gameEngine() {
     foodElement.classList.add('food');
     board.appendChild(foodElement);
 }
-
-
-
 
 
 // Main Logic starts here
